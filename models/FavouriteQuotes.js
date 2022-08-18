@@ -1,18 +1,22 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Quotes extends Model {}
+class FavouriteQuotes extends Model {}
 
-Quotes.init(
+FavouriteQuotes.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       primaryKey: true,
       autoIncrement: true,
     },
-    quote: {
-      type: DataTypes.STRING,
+    quote_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'quotes',
+        key: 'id',
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -27,8 +31,8 @@ Quotes.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'quotes',
+    modelName: 'favourite_quotes',
   }
 );
 
-module.exports = Quotes;
+module.exports = FavouriteQuotes;

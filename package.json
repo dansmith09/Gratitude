@@ -1,5 +1,5 @@
 {
-  "name": "user-list",
+  "name": "gratitude",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,18 +8,26 @@
     "start": "node server.js",
     "seed": "node seeds/seed.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-murphy03/Gratitude.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G-murphy03/Gratitude/issues"
+  },
+  "homepage": "https://github.com/G-murphy03/Gratitude#readme",
   "dependencies": {
-    "bcrypt": "^5.0.0",
-    "connect-session-sequelize": "^7.0.4",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "express-session": "^1.17.1",
-    "mysql2": "^2.2.5",
-    "nodemailer": "^6.7.8",
-    "sequelize": "^6.3.5"
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3",
+    "nodemailer": "^6.7.8"
   }
 }
