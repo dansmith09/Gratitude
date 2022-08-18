@@ -28,9 +28,6 @@ Journal.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    favourite: {
-      type: DataTypes.BOOLEAN,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
