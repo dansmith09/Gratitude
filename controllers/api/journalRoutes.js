@@ -3,4 +3,6 @@ const { Journal } = require('../../models');
 
 // journal routes code here
 
+
+
 module.exports = router;
