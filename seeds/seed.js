@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { User, Quotes } = require('../models');
+const { User, Quotes, Journal } = require('../models');
 
 const userData = require('./userData.json');
 const quotesData = require('./quotesData.json');
@@ -20,9 +20,8 @@ const seedDatabase = async () => {
     });
   }
 
-
   for (const journal of journalData) {
-    await Quotes.create({
+    await Journal.create({
       ...journal,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });

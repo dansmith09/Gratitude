@@ -1,12 +1,14 @@
 const router = require('express').Router();
-const { Quotes } = require('../../models');
+const { Quotes, User } = require('../../models');
 
 // quotes routes code here
 
 // get quotes pulls all the quotes from the quotes database
 router.get('/', async (req, res) => {
     try {
-        const quotes = await Quotes.findAll();
+        const quotes = await Quotes.findAll({
+            include: [{ model: User }],
+        });
         res.status(200).json(quotes);
     } catch(err) {
         res.status(500).json(err);
