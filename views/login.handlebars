@@ -10,8 +10,11 @@
     <label for="password-login" class="form-label">Password:</label>
     <input class="form-control" type="password" id="password-login">
   </div>
+  <div id="loginAlert" class="alert alert-warning" role="alert">
+  We couldn't find an account with the details you provided.<br> <a href="#name-signup" class="alert-link">Sign up for an account here</a> or check your details and try again
+  </div>
   <button class="btn btn-primary" type="submit">Login</button>
-</form>
+  </form>
   <br><br>
 
 <h2>Sign Up</h2>
@@ -32,8 +35,10 @@
     <input class="form-control" type="password" id="password-signup" aria-describedby="passwordSignUpHelp">
     <div id="passwordSignUpHelp" class="form-text">Please enter a password between 8 and 20 characters</div>
   </div>
+  <div id="signUpAlert"class="alert alert-warning" role="alert">
+  Make sure to provide all of the details above and your password is between 8 and 20 characters
+  </div>
     <button class="btn btn-primary" type="submit">Sign Up</button>
 </form>
-
 
 <script src="/js/login.js"></script>
