@@ -70,7 +70,7 @@ router.delete('/:id',  async (req, res) =>  {
         });
 
         if (!quotes) {
-            res.status(404).json({ message: 'No category found with that id!' });
+            res.status(404).json({ message: 'No quote found with that id!' });
             return;
         }
         
