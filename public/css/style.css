@@ -3,13 +3,7 @@ h1 {
   background-color: rgb(19, 7, 249);
 }
 
-#login-form{
-  border: 2px solid;
-  border-radius: 8px;
-  padding: 15px;
-}
-
-#signup-form{
+#loginSignUpForms{
   border: 2px solid;
   border-radius: 8px;
   padding: 15px;
