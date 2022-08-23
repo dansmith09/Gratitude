@@ -3,8 +3,232 @@ h1 {
   background-color: rgb(19, 7, 249);
 }
 
+/* styling for login and signup forms */
 #loginSignUpForms{
   border: 2px solid;
   border-radius: 8px;
   padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styling for login button */
+#loginBtn{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* styling for signup button */
+#signupBtn{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* styling for login form  */
+#loginHidden{
+  display:contents;
+  transition: ease-in-out 0.3s;
+}
+
+/* styling for signup form */
+#signupHidden{
+  display:none;
+  transition: ease-in-out 0.3s;
+}
+
+#signup-promptBtn{
+  cursor: pointer;
+  text-decoration-line: underline;
+  color: blue;
+}
+
+#login-promptBtn{
+  cursor: pointer;
+  text-decoration-line: underline;
+  color: blue;
 }

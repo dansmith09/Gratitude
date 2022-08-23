@@ -48,6 +48,24 @@ const signupFormHandler = async (event) => {
   }
 };
 
+// Code that hides login and displays sign up
+const showSignup = () => {
+  const signup = document.getElementById('signupHidden');
+  const login = document.getElementById('loginHidden');
+
+  login.style.display = 'none';
+  signup.style.display = 'contents';
+
+}
+// Code that hides signup and displays login
+const showLogin = () =>{
+  const signup = document.getElementById('signupHidden');
+  const login = document.getElementById('loginHidden');
+
+  login.style.display = 'contents';
+  signup.style.display = 'none';
+}
+
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
@@ -55,4 +73,14 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+document
+  .querySelector('#signup-promptBtn')
+  .addEventListener('click', showSignup);
+
+document
+  .querySelector('#login-promptBtn')
+  .addEventListener('click', showLogin);
+
+
 
