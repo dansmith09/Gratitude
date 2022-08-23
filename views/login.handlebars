@@ -1,3 +1,4 @@
+<div id="loginHidden">
 <h2>Login</h2>
 
 <form class="form login-form" id="loginSignUpForms">
@@ -13,10 +14,13 @@
   <div id="loginAlert" class="alert alert-warning" role="alert">
   We couldn't find an account with the details you provided.<br> <a href="#name-signup" class="alert-link">Sign up for an account here</a> or check your details and try again
   </div>
-  <button class="btn btn-primary" type="submit">Login</button>
-  </form>
-  <br><br>
+  <button class="btn btn-primary" id="loginBtn" type="submit">Login</button>
+  <span id="signup-prompt">Don't have an account? <a id="signup-promptBtn">Sign Up Here</a></span>
+</form>
 
+</div>
+
+<div id="signupHidden">
 <h2>Sign Up</h2>
 
 <form class="form signup-form" id="loginSignUpForms">
@@ -38,7 +42,9 @@
   <div id="signUpAlert"class="alert alert-warning" role="alert">
   Make sure to provide all of the details above and your password is between 8 and 20 characters
   </div>
-    <button class="btn btn-primary" type="submit">Sign Up</button>
+    <button class="btn btn-primary" id="signupBtn" type="submit">Sign Up</button>
+    <span id="login-prompt">Already have an account? <a id="login-promptBtn">Login Here</a></span>
 </form>
+</div>
 
 <script src="/js/login.js"></script>
