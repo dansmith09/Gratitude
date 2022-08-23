@@ -10,6 +10,13 @@ h1 {
   padding: 15px;
 }
 
+/* hides alerts by default */
+
+#loginAlert, #signUpAlert {
+    display: none;
+    transition: ease-in 0.3s;
+}
+
 
 
 
