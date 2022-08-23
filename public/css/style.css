@@ -88,3 +88,47 @@ h5 {
     width: 100%;
     height: 100%;
 }
+
+
+
+
+
+
+
+
+
+/* styling for login button */
+#loginBtn{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* styling for signup button */
+#signupBtn{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* styling for login form  */
+#loginHidden{
+  display:contents;
+  transition: ease-in-out 0.3s;
+}
+
+/* styling for signup form */
+#signupHidden{
+  display:none;
+  transition: ease-in-out 0.3s;
+}
+
+#signup-promptBtn{
+  cursor: pointer;
+  text-decoration-line: underline;
+  color: blue;
+}
+
+#login-promptBtn{
+  cursor: pointer;
+  text-decoration-line: underline;
+  color: blue;
+}
