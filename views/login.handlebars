@@ -1,6 +1,7 @@
+<div id="loginHidden">
 <h2>Login</h2>
 
-<form class="form login-form">
+<form class="form login-form" id="loginSignUpForms">
   <div class="mb-3">
     <label for="email-login" class="form-label">Email Address:</label>
     <input class="form-control" type="email" id="email-login" aria-describedby="emailHelp">
@@ -10,13 +11,19 @@
     <label for="password-login" class="form-label">Password:</label>
     <input class="form-control" type="password" id="password-login">
   </div>
-  <button class="btn btn-primary" type="submit">Login</button>
+  <div id="loginAlert" class="alert alert-warning" role="alert">
+  We couldn't find an account with the details you provided.<br> <a id="signup-promptBtn" class="alert-link">Sign up for an account here</a> or check your details and try again
+  </div>
+  <button class="btn btn-primary" id="loginBtn" type="submit">Login</button>
+  <span id="signup-prompt">Don't have an account? <a id="signup-promptBtn2">Sign Up Here</a></span>
 </form>
-  <br><br>
 
+</div>
+
+<div id="signupHidden">
 <h2>Sign Up</h2>
 
-<form class="form signup-form">
+<form class="form signup-form" id="loginSignUpForms">
   <div class="mb-3">
     <label for="name-signup" class="form-label">Name:</label>
     <input class="form-control" type="text" id="name-signup" aria-describedby="nameSignUpHelp">
@@ -32,8 +39,12 @@
     <input class="form-control" type="password" id="password-signup" aria-describedby="passwordSignUpHelp">
     <div id="passwordSignUpHelp" class="form-text">Please enter a password between 8 and 20 characters</div>
   </div>
-    <button class="btn btn-primary" type="submit">Sign Up</button>
+  <div id="signUpAlert"class="alert alert-warning" role="alert">
+  Make sure to provide all of the details above and your password is between 8 and 20 characters
+  </div>
+    <button class="btn btn-primary" id="signupBtn" type="submit">Sign Up</button>
+    <span id="login-prompt">Already have an account? <a id="login-promptBtn">Login Here</a></span>
 </form>
-
+</div>
 
 <script src="/js/login.js"></script>

@@ -1,7 +1,7 @@
 // Modified code from Module 14 mini project
 const loginFormHandler = async (event) => {
   event.preventDefault();
-
+  hideLoginAlert();
   // Collect values from the login form
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
@@ -19,17 +19,20 @@ const loginFormHandler = async (event) => {
       // This may need to be changed depending upon what we choose the user main page to be called.
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      loginAlert();
     }
   }
 };
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
+  hideSignUpAlert();
 
   const name = document.querySelector('#name-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
+
+  if(!name || !email || !password || password.length <8) {signUpAlert()}
 
   if (name && email && password) {
     const response = await fetch('/api/users', {
@@ -48,6 +51,24 @@ const signupFormHandler = async (event) => {
   }
 };
 
+// Code that hides login and displays sign up
+const showSignup = () => {
+  const signup = document.getElementById('signupHidden');
+  const login = document.getElementById('loginHidden');
+
+  login.style.display = 'none';
+  signup.style.display = 'contents';
+
+}
+// Code that hides signup and displays login
+const showLogin = () =>{
+  const signup = document.getElementById('signupHidden');
+  const login = document.getElementById('loginHidden');
+
+  login.style.display = 'contents';
+  signup.style.display = 'none';
+}
+
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
@@ -55,4 +76,37 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+
+document
+  .querySelector('#signup-promptBtn')
+  .addEventListener('click', showSignup);
+
+document
+  .querySelector('#signup-promptBtn2')
+  .addEventListener('click', showSignup);
+
+document
+  .querySelector('#login-promptBtn')
+  .addEventListener('click', showLogin);
+
+const signUpAlert = () => {
+  const signUpAlert = document.querySelector('#signUpAlert');
+  signUpAlert.style.display = 'block';
+}
+
+const hideSignUpAlert = () => {
+  const signUpAlert = document.querySelector('#signUpAlert');
+  signUpAlert.style.display = 'none';
+}
+
+const loginAlert = () => {
+  const loginAlert = document.querySelector('#loginAlert');
+  loginAlert.style.display = 'block';
+}
+
+const hideLoginAlert = () => {
+  const loginAlert = document.querySelector('#loginAlert');
+  loginAlert.style.display = 'none';
+}
 

@@ -28,6 +28,10 @@ Journal.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    journal_entry: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

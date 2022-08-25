@@ -3,7 +3,7 @@ const router = require('express').Router();
 router.get('/', async (req, res) => {
     try {
       // Pass serialized data and session flag into template
-      res.render('login');
+      res.render('homepage');
     } catch (err) {
       res.status(500).json(err);
     }
