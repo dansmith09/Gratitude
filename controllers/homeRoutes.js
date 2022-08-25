@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const seedDatabase = require('../seeds/seed');
 
 router.get('/', async (req, res) => {
     try {
@@ -20,9 +19,5 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/seed', (req, res) => {
-  seedDatabase();
-  res.status(200);
-})
 
 module.exports = router;
