@@ -37,4 +37,5 @@ router.get('/journal', async (req, res) => {
   }
 });
 
+
 module.exports = router;
