@@ -120,12 +120,21 @@ h5 {
   transition: ease-in-out 0.3s;
 }
 
+/* styling for signup prompt anchor */
 #signup-promptBtn{
+    cursor: pointer;
+    text-decoration-line: underline;
+    color: blue;
+}
+
+/* styling for signup prompt anchor */
+#signup-promptBtn2{
   cursor: pointer;
   text-decoration-line: underline;
   color: blue;
 }
 
+/* styling for login prompt anchor */
 #login-promptBtn{
   cursor: pointer;
   text-decoration-line: underline;
