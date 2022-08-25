@@ -48,6 +48,8 @@ p {
 }
 h1 {
     font-family: 'Titillium Web', sans-serif;
+    padding-left: 40px;
+
 }
 .homebutton {
     color: white!important;
@@ -100,6 +102,196 @@ h5 {
 #loginBtn{
   display: inline-block;
   margin-right: 5px;
+<<<<<<< HEAD
+}
+
+/* styling for signup button */
+#signupBtn{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* styling for login form  */
+#loginHidden{
+  display:contents;
+  transition: ease-in-out 0.3s;
+}
+
+/* styling for signup form */
+#signupHidden{
+  display:none;
+  transition: ease-in-out 0.3s;
+}
+
+#signup-promptBtn{
+  cursor: pointer;
+  text-decoration-line: underline;
+  color: blue;
+}
+
+#login-promptBtn{
+  cursor: pointer;
+  text-decoration-line: underline;
+  color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*source:https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+#demo {
+  text-align:center;
+}
+
+.dashboard-heading {
+  text-align:center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.container {
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+.btns {
+  background-color:  white;
+  margin-top: 10px;
+}
+
+.centrebtns {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: contents;
+}
+
+#sleepFacts{
+  position: relative;
+  top:45px;
+}
+=======
 }
 
 /* styling for signup button */
@@ -141,3 +333,4 @@ h5 {
   color: blue;
 }
 
+>>>>>>> 4f0e74b6a0a25c59d4c328fef4f230a3cb9e00ad
