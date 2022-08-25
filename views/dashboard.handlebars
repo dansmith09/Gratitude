@@ -45,7 +45,13 @@
     <div class="w-100"></div>
 
     <div class="col-6">
-        <h3>Listen to the song of the day: (incomplete)</h3>
+        <h3>Mood Lightener: (incomplete)</h3>
+        <audio class="my_audio" controls preload="none">
+        <source src="audio/my_song.mp3" type="audio/mpeg">
+        <source src="audio/my_song.ogg" type="audio/ogg">
+        <button onclick="play_audio('play')">PLAY</button>
+        <button onclick="play_audio('stop')">STOP</button>
+</audio>
     </div>
     <div class="col-6">
         <h3>Past Journal entry (incomplete)</h3>
