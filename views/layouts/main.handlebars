@@ -8,15 +8,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
   rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
   crossorigin="anonymous">
+  <!-- Google Fonts Links Starts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+  <!-- Google Fonts Links Ends -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <header class="container-fluid text-center p-2">
     <h1>
-      Gratitude
+      <a class="homebutton" href="/">Gratitude</a>
     </h1>
-    <h5 id="random-quote"></h5>
+    <h5 class="quote" id="random-quote"></h5>
   </header>
   <main class="container container-fluid mt-5">
     {{{ body }}}
@@ -26,4 +31,6 @@
       <br>
   </footer>
   <script src="/js/main.js"></script>
+</body>
+
 </html>
