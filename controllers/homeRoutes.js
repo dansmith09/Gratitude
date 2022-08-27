@@ -2,6 +2,11 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
     try {
+      console.log(req.session.logged_in);
+      if (req.session.logged_in) {
+        res.redirect('/dashboard');
+        return;
+      }
       // Pass serialized data and session flag into template
       res.render('homepage');
     } catch (err) {
@@ -36,5 +41,6 @@ router.get('/journal', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;

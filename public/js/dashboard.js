@@ -105,4 +105,24 @@ function resetSlider(event){
   suggestion.textContent = '';
 }
 
+$(".my_audio").trigger('load');
+function play_audio(task) {
+  if(task == 'play'){
+       $(".my_audio").trigger('play');
+  }
+  if(task == 'stop'){
+       $(".my_audio").trigger('pause');
+       $(".my_audio").prop("currentTime",0);
+  }
+}
 
+playlist = {
+  'song_1' : 'audio/splat.mp3',
+  'song_2' : 'audio/saw.mp3',
+  'song_3' : 'audio/marbles.mp3',
+  'song_4' : 'audio/seagulls.mp3',
+  'song_5' : 'audio/plane.mp3'
+}
+
+keys = Object.keys(playlist);
+$('.my_audio').append("<source id='sound_src' src=" + playlist[keys[0]] + " type='audio/mpeg'>");
