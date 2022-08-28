@@ -11,6 +11,7 @@ var journalEntries = document.getElementById("journalEntries");
 var sixHoursFact = document.getElementById("6HoursFact");
 var sixToEightHoursFact = document.getElementById("6-8HoursFact");
 var eightHoursFact = document.getElementById("8HoursFact");
+var video = document.getElementById("video");
 output.textContent = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
@@ -74,35 +75,34 @@ function eightHoursSleep(event) {
 
 function scoreResponse(event) {
 event.preventDefault;
-if (0<slider.value<10) {
-suggestion.textContent = "go for a walk";
-} else if (10<slider.value<=20){
-  suggestion.textContent = "go for a hike";
-} /*else if (20<sliderValue<=30){
-  suggestion.textContent = "go for a swim";
-} else if (30<sliderValue<=40){
-
-} else if (40<sliderValue<=50){
-
-} else if (50<sliderValue<=60){
-
-} else if (60<sliderValue<=70){
-
-} else if (70<sliderValue<=80){
-
-} else if (80<sliderValuee<=90){
-
-} */ 
-else {
-  suggestion.textContent = "go for a swim";
-}
+if (video.getAttribute("class")){
+  video.removeAttribute("class");
+  video.setAttribute("class", "hide")
 };
+
+  if (slider.value>=0 && slider.value<25) {
+  suggestion.textContent = "We suggest that you take some time to yourself, rest, recover and rebuild. Play our mood radio to try and uplift your mood!";
+  } else if (slider.value>=25 && slider.value<50) {
+    suggestion.textContent = "We suggest you to go outside get some fresh air and walk outdoors. A 2015 study compared the activity the activity of people who walked for 90 minutes in either an urban or natural place. Researchers discovered that the people who took a natural walk had lower activity in the prefrontal cortex, a part of the brain that is overactive during depression and stress. So head on out and be one with nature!";
+  } else if (slider.value>=50 && slider.value<75) {
+    suggestion.textContent = "We suggest doing a little breathing work to improveyour mood. Try out this great video below!";
+    video.removeAttribute("class");
+    video.setAttribute("class", "show");
+    video.setAttribute("class", "video-container");
+  } else {
+    suggestion.textContent = "Keep doing what your doing!";
+  }
+}
 
 function resetSlider(event){
   event.preventDefault;
   output.textContent = 50;
   slider.value = 50;
   suggestion.textContent = '';
+  if (video.getAttribute("class")){
+    video.removeAttribute("class");
+    video.setAttribute("class", "hide")
+  };
 }
 
 $(".my_audio").trigger('load');
