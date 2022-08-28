@@ -1,3 +1,4 @@
+
 {{!-- new journal entry --}}
 <style>
     .card {
@@ -22,25 +23,27 @@
     <div class="card">
         <ul class="list-group list-group-flush"> 
             <div class="input-group input-group-lg">
-                <span class="input-group-text" id="gratitude_entry_1">Gratitude 1</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <span class="input-group-text">Gratitude 1</span>
+                <input  id="gratitude_entry_1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
             </div>
             <div class="input-group input-group-lg">
-                <span class="input-group-text" id="gratitude_entry_2">Gratitude 2</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <span class="input-group-text">Gratitude 2</span>
+                <input  id="gratitude_entry_2" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
             </div>
             <div class="input-group input-group-lg">
-                <span class="input-group-text" id="gratitude_entry_3">Gratitude 3</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <span class="input-group-text" >Gratitude 3</span>
+                <input id="gratitude_entry_3" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
             </div>
             <div class="input-group input-group-lg">
-                <span class="input-group-text" id="journal_entry">Journal Entry</span><br>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                <span class="input-group-text">Journal Entry</span><br>
+                <textarea id="journal_entry" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
             </div>
         </ul>
     </div>
-    <br>
-    <button class="btn btn-primary" id="signupBtn" type="submit">Save Entry</button>
+    <div id="journalSuccess"class="alert alert-success" role="alert">
+        <b>Awesome Stuff! </b>Your gratitude and journal entries have been saved.
+    </div>
+    <button class="btn btn-primary" id="create_journal_btn" type="submit">Save Entry</button>
 </div>
 
-
+<script src="/js/journal.js"></script>

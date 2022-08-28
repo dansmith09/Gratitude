@@ -3,7 +3,7 @@
   border-radius: 8px;
   padding: 15px;
 }
-#loginAlert, #signUpAlert {
+#loginAlert, #signUpAlert, #journalSuccess {
     display: none;
     transition: ease-in 0.3s;
 }
@@ -13,7 +13,6 @@
     /* border: solid red 1px; */
 }
 header {
-    padding-left: 25px;
     padding-bottom: 10px;
     background: #2a2850;
     color: white;
@@ -48,7 +47,6 @@ p {
 }
 h1 {
     font-family: 'Titillium Web', sans-serif;
-    padding-left: 40px;
 
 }
 .homebutton {
@@ -103,6 +101,22 @@ h5 {
   align-items: flex-end;
 }
 
+#video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 30%; 
+  height: 0;
+  text-align:center;
+}
+
+.video-container {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 /* styling for login button */
 #loginBtn{
@@ -141,85 +155,6 @@ h5 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*source:https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
 .slidecontainer {
   width: 100%; /* Width of the outside container */
@@ -231,7 +166,7 @@ h5 {
   appearance: none;
   width: 100%; /* Full-width */
   height: 25px; /* Specified height */
-  background: #d3d3d3; /* Grey background */
+  background: #eea09b; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
@@ -249,14 +184,14 @@ h5 {
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #04AA6D; /* Green background */
+  background: #2a2850; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #04AA6D; /* Green background */
+  background: #2a2850; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
@@ -337,4 +272,40 @@ h5 {
   color: blue;
 }
 
+#card {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: 20px;
+}
+
+#display {
+  width: 60%;
+  border-radius: 20px 0 0 20px;
+  background: rgba(255,255,255,.5);
+  backdrop-filter: blur(30px) hue-rotate(20deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+#art {
+    height: 200px;
+    margin: 0 auto;
+}
+
+.item {
+    padding: 0 1em;
+    background: white;
+}
+
+#list {
+    width: 40%;
+    border-radius: 0 20px 20px 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+}
 

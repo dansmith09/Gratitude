@@ -18,23 +18,23 @@ User.hasMany(Quotes, {
 })
 
 Quotes.belongsTo(User, {
-  foreignKey: 'user_id'
+  foreignKey: 'user_id',
 });
 
-User.belongsToMany(Quotes, {
-  through: {
-    model: FavouriteQuotes,
-    uniquekey: false
-  },
-  as: 'popular_quotes'
-});
+// User.belongsToMany(Quotes, {
+//   through: {
+//     model: FavouriteQuotes,
+//     uniquekey: false
+//   },
+//   as: 'popular_quotes'
+// });
 
-Quotes.belongsToMany(User, {
-  through: {
-    model: FavouriteQuotes,
-    uniquekey: false
-  },
-  as: 'favourited_quotes'
-});
+// Quotes.belongsToMany(User, {
+//   through: {
+//     model: FavouriteQuotes,
+//     uniquekey: false
+//   },
+//   as: 'favourited_quotes'
+// });
 
 module.exports = { User, Journal, Quotes, FavouriteQuotes };
