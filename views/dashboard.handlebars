@@ -8,18 +8,20 @@
     </div>
 
 <div>
-<h2>How are you feeling today? (incomplete)</h2>
+<h2>How are you feeling today?</h2>
 <div class="slidecontainer">
   <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
   <p id="demo"></p>
 </div>
 
 <p id="suggestion"></p>
-<div class="centrebtns">
-    <button type="button" class="btn btn-info" id="submitScore">Submit Score</button>
-    <button type="button" class="btn btn-info" id="reset">Reset</button>
+<div class="hide" id="video">
+    <iframe src="https://www.youtube.com/embed/F28MGLlpP90?start=0&autoplay=1" width="560" height="315" title="The Science of Gratitude" frameborder="0" allowfullscreen></iframe>
 </div>
-
+<div class="centrebtns">
+    <button type="button" class="btn btn-primary" id="submitScore">Submit Score</button>
+    <button type="button" class="btn btn-primary" id="reset">Reset</button>
+</div>
 </div>
 
 
@@ -65,8 +67,11 @@
          </div>
     </div>
     <div class="col-xs-12 col-md-6">
-        <h3>Past Journal entry (incomplete)</h3>
-
+        <h3>Past Journal entry</h3>
+        <h4>{{date_created}}</h4>
+        <p>{{{gratitude_entry_1}}}</p>
+        <p>{{{gratitude_entry_2}}}</p>
+        <p>{{{gratitude_entry_3}}}</p>
     </div>
   </div>
 </div>
