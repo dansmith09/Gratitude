@@ -32,5 +32,8 @@
     "nodemailer-express-handlebars": "^4.0.0",
     "sequelize": "^6.21.3"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
