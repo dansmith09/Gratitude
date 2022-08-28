@@ -90,12 +90,18 @@ h5 {
     height: 100%;
 }
 
-
-
-
-
-
-
+#userDash {
+  display: inline block;
+  align-items: flex-end;
+}
+#logout {
+  display: inline block;
+  align-items: flex-end;
+}
+#login {
+  display: inline block;
+  align-items: flex-end;
+}
 
 
 /* styling for login button */
