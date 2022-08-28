@@ -288,3 +288,79 @@ h5 {
   position: relative;
   top:45px;
 }
+
+/* styling for signup button */
+#signupBtn{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* styling for login form  */
+#loginHidden{
+  display:contents;
+  transition: ease-in-out 0.3s;
+}
+
+/* styling for signup form */
+#signupHidden{
+  display:none;
+  transition: ease-in-out 0.3s;
+}
+
+/* styling for signup prompt anchor */
+#signup-promptBtn{
+    cursor: pointer;
+    text-decoration-line: underline;
+    color: blue;
+}
+
+/* styling for signup prompt anchor */
+#signup-promptBtn2{
+  cursor: pointer;
+  text-decoration-line: underline;
+  color: blue;
+}
+
+/* styling for login prompt anchor */
+#login-promptBtn{
+  cursor: pointer;
+  text-decoration-line: underline;
+  color: blue;
+}
+
+#card {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: 20px;
+}
+
+#display {
+  width: 60%;
+  border-radius: 20px 0 0 20px;
+  background: rgba(255,255,255,.5);
+  backdrop-filter: blur(30px) hue-rotate(20deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+#art {
+    height: 200px;
+    margin: 0 auto;
+}
+
+.item {
+    padding: 0 1em;
+    background: white;
+}
+
+#list {
+    width: 40%;
+    border-radius: 0 20px 20px 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+}
