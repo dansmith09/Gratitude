@@ -102,7 +102,6 @@ h5 {
 #loginBtn{
   display: inline-block;
   margin-right: 5px;
-<<<<<<< HEAD
 }
 
 /* styling for signup button */
@@ -291,8 +290,7 @@ h5 {
   position: relative;
   top:45px;
 }
-=======
-}
+
 
 /* styling for signup button */
 #signupBtn{
@@ -333,4 +331,4 @@ h5 {
   color: blue;
 }
 
->>>>>>> 4f0e74b6a0a25c59d4c328fef4f230a3cb9e00ad
+
