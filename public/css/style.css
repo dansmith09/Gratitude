@@ -3,7 +3,7 @@
   border-radius: 8px;
   padding: 15px;
 }
-#loginAlert, #signUpAlert {
+#loginAlert, #signUpAlert, #journalSuccess {
     display: none;
     transition: ease-in 0.3s;
 }
@@ -13,7 +13,6 @@
     /* border: solid red 1px; */
 }
 header {
-    padding-left: 25px;
     padding-bottom: 10px;
     background: #2a2850;
     color: white;
@@ -48,7 +47,6 @@ p {
 }
 h1 {
     font-family: 'Titillium Web', sans-serif;
-    padding-left: 40px;
 
 }
 .homebutton {
@@ -102,7 +100,6 @@ h5 {
 #loginBtn{
   display: inline-block;
   margin-right: 5px;
-<<<<<<< HEAD
 }
 
 /* styling for signup button */
@@ -291,46 +288,3 @@ h5 {
   position: relative;
   top:45px;
 }
-=======
-}
-
-/* styling for signup button */
-#signupBtn{
-  display: inline-block;
-  margin-right: 5px;
-}
-
-/* styling for login form  */
-#loginHidden{
-  display:contents;
-  transition: ease-in-out 0.3s;
-}
-
-/* styling for signup form */
-#signupHidden{
-  display:none;
-  transition: ease-in-out 0.3s;
-}
-
-/* styling for signup prompt anchor */
-#signup-promptBtn{
-    cursor: pointer;
-    text-decoration-line: underline;
-    color: blue;
-}
-
-/* styling for signup prompt anchor */
-#signup-promptBtn2{
-  cursor: pointer;
-  text-decoration-line: underline;
-  color: blue;
-}
-
-/* styling for login prompt anchor */
-#login-promptBtn{
-  cursor: pointer;
-  text-decoration-line: underline;
-  color: blue;
-}
-
->>>>>>> 4f0e74b6a0a25c59d4c328fef4f230a3cb9e00ad

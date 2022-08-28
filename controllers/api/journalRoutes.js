@@ -36,7 +36,8 @@ router.post('/', async (req, res) => {
             gratitude_entry_1: req.body.gratitude_entry_1,
             gratitude_entry_2: req.body.gratitude_entry_2,
             gratitude_entry_3: req.body.gratitude_entry_3,
-            journal_entry: req.body.journal_entry
+            journal_entry: req.body.journal_entry,
+            user_id: req.session.user_id
         });
         res.json(journalData);
     } catch(err){
