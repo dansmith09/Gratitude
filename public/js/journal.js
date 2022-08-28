@@ -1,11 +1,9 @@
 const createJournal = async () => {
-  const entry1 = document.querySelector('#gratitude_entry_1').value;
-  const entry2 = document.querySelector('#gratitude_entry_2').value;
-  const entry3 = document.querySelector('#gratitude_entry_3').value;
-  const journal_entry = document.querySelector('#journal_entry').value;
+  let entry1 = document.querySelector('#gratitude_entry_1').value;
+  let entry2 = document.querySelector('#gratitude_entry_2').value;
+  let entry3 = document.querySelector('#gratitude_entry_3').value;
+  let journal_entry = document.querySelector('#journal_entry').value;
  
-    console.log(entry1, entry2, entry3, journal_entry);
-
   if (entry1 && entry2 && entry3 && journal_entry) {
       const response = await fetch('/api/journal', {
           method: 'POST',
@@ -19,12 +17,21 @@ const createJournal = async () => {
           headers: { 'Content-Type': 'application/json'},
       });
       if (response.ok) {
-          alert('Journal is created');
+        showSuccess();
+        document.querySelector('#gratitude_entry_1').value = '';
+        document.querySelector('#gratitude_entry_2').value = '';
+        document.querySelector('#gratitude_entry_3').value = '';
+        document.querySelector('#journal_entry').value = '';
       } else {
-          alert(response.statusText);
+        alert(response.statusText);
       }
   }
 };
+
+const showSuccess = () => {
+    const successAlert = document.getElementById('journalSuccess');
+    successAlert.style.display = 'block';
+}
 // create_journal_btn
 document
 .querySelector('#create_journal_btn')

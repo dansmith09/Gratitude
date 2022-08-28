@@ -3,7 +3,7 @@
   border-radius: 8px;
   padding: 15px;
 }
-#loginAlert, #signUpAlert {
+#loginAlert, #signUpAlert, #journalSuccess {
     display: none;
     transition: ease-in 0.3s;
 }
@@ -13,7 +13,6 @@
     /* border: solid red 1px; */
 }
 header {
-    padding-left: 25px;
     padding-bottom: 10px;
     background: #2a2850;
     color: white;
@@ -48,7 +47,6 @@ p {
 }
 h1 {
     font-family: 'Titillium Web', sans-serif;
-    padding-left: 40px;
 
 }
 .homebutton {
