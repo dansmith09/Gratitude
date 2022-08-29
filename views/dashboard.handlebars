@@ -31,9 +31,9 @@
 
     <div class="col-xs-12 col-md-6 row container">
         <h3>How many hours did you sleep?</h3>
-        <button class="col-12 btn btns" id="6h"> > 6 hours</button>
+        <button class="col-12 btn btns" id="6h"> < 6 hours</button>
         <button class="col-12 btn btns" id="6-8h"> 6-8 hours</button>
-        <button class="col-12 btn btns" id="8h">  8 hours</button>
+        <button class="col-12 btn btns" id="8h"> > 8 hours</button>
     </div>
 
     <div class="col-xs-12 col-md-6 container sleep-facts" id="sleepFacts">
@@ -45,6 +45,9 @@
 
     <!-- Force next columns to break to new line -->
     <div class="w-100"></div>
+
+    <div class="col-xs-12 col-md-6">
+    </div>
 
     <div class="col-xs-12 col-md-6">
         <h3>Mood Radio:</h3>
@@ -66,21 +69,5 @@
            </div>
          </div>
     </div>
-    <div class="col-xs-12 col-md-6">
-        <h3>Past Journal entry</h3>
-        <h4>{{date_created}}</h4>
-        <p>{{{gratitude_entry_1}}}</p>
-        <p>{{{gratitude_entry_2}}}</p>
-        <p>{{{gratitude_entry_3}}}</p>
-    </div>
   </div>
 </div>
-
-
-<!--features to add:
-- response based off user input to improve mood
-- song of the day
-- average mood throughout the past week
-- bubbly theme
-- past gratitude entry
--->
