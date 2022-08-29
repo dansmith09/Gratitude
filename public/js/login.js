@@ -15,15 +15,14 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      // This may need to be changed depending upon what we choose the user main page to be called.
+      // If successful, redirect the browser to the dashboard page
       document.location.replace('/dashboard');
     } else {
       loginAlert();
     }
   }
 };
-
+// Sign up form 
 const signupFormHandler = async (event) => {
   event.preventDefault();
   hideSignUpAlert();

@@ -8,13 +8,9 @@ fetch('/api/quotes')
       quoteHTML.innerHTML = randQuote;
 });
 
-const login = () => {
-  document.location.replace('/login');
-}
-   
-const dashboard = () => {
-  document.location.replace('/dashboard');
-}
+const dashboard = (event) => {
+  event.preventDefault;
+  document.location.replace('/');
+};
 
-document.querySelector('#login').addEventListener('click', login);
 document.querySelector('#userDash').addEventListener('click', dashboard);

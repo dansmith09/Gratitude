@@ -91,13 +91,20 @@ h5 {
 #userDash {
   display: inline block;
   align-items: flex-end;
+  background-color: #eea09b;
 }
 #logout {
   display: inline block;
   align-items: flex-end;
+  background-color:#eea09b;
 }
 #login {
   display: inline block;
+  border: solid 1px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color:#eea09b;
+  color: #2a2850;
   align-items: flex-end;
 }
 
