@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Quotes, User } = require('../../models');
 
-// quotes routes code here
+// Currently, only the get route is in use.
 
 // get quotes pulls all the quotes from the quotes database
 router.get('/', async (req, res) => {

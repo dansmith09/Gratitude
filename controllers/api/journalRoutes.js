@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const { Journal, User } = require('../../models');
 
-// journal routes code here
-// get all journal data 
+// Get all journal data 
 router.get('/', async (req, res) => {
     try{
         const journalData = await Journal.findAll({
@@ -14,6 +13,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Get journal data associated with user
 router.get('/user', async (req, res) => {
     try{
         const UserJournalData = await Journal.findAll({
@@ -28,6 +28,7 @@ router.get('/user', async (req, res) => {
     }
 });
 
+// Get journal by ID
 router.get('/:id', async (req,res) => {
     try {
         const journalData = await Journal.findByPk(req.params.id);
@@ -42,7 +43,7 @@ router.get('/:id', async (req,res) => {
     }
 });
 
-// upload a journal entry
+// Upload a journal entry
 router.post('/', async (req, res) => {
     try {
         const journalData = await Journal.create({
@@ -59,7 +60,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// delete a journal entry
+// Delete a journal entry
 router.delete('/:id',  async (req, res) =>  {
     try {
         const journalData = await Journal.destroy({
@@ -82,6 +83,5 @@ router.delete('/:id',  async (req, res) =>  {
 
 
 
-// we have to fetch all the journal for a single user
 
 module.exports = router;
