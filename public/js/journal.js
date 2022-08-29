@@ -1,8 +1,8 @@
 const createJournal = async () => {
-    const entry1 = document.querySelector('#entry1').value.trim();
-    const entry2 = document.querySelector('#entry2').value.trim();
-    const entry3 = document.querySelector('#entry3').value.trim();
-    const entry4 = document.querySelector('#entry4').value.trim();
+    const entry1 = document.querySelector('#entry1').value;
+    const entry2 = document.querySelector('#entry2').value;
+    const entry3 = document.querySelector('#entry3').value;
+    const entry4 = document.querySelector('#entry4').value;
 
     if (entry1 && entry2 && entry3 && entry4) {
         const response = await fetch('/api/journal', {
@@ -16,11 +16,13 @@ const createJournal = async () => {
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
-            alert('Journal is created');
-            document.location.replace('/journals/user');
-        } else {
-            alert(response.statusText);
-        }
+            showSuccess();
+            document.querySelector('#entry1').value = '';
+            document.querySelector('#entry2').value = '';
+            document.querySelector('#entry3').value = '';
+            document.querySelector('#entry4').value = '';
+          } else {
+            alert(response.statusText)};
     }
 };
 
@@ -51,7 +53,11 @@ const getJournalsForUser = async () => {
     }
 };
 getJournalsForUser()
- 
+
+const showSuccess = () => {
+    const successAlert = document.getElementById('journalSuccess');
+    successAlert.style.display = 'block';
+}
 // create_journal_btn
 document.querySelector('#signupBtn')?.addEventListener('click', createJournal);
 

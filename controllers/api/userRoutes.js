@@ -6,7 +6,7 @@ router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
     req.session.save(() => {
-      // sends welcome email using nodemailer
+      // Sends welcome email using nodemailer
       sendEmail(req.body.name, req.body.email);
       
       req.session.user_id = userData.id;
@@ -19,6 +19,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// User login verification
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -51,6 +52,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// User Logout
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

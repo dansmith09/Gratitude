@@ -26,11 +26,13 @@ journalEntries.addEventListener("click", journalEntriesRoute);
 sixToEightHours.addEventListener("click", sixToEightHoursSleep);
 eightHours.addEventListener("click", eightHoursSleep);
 
+// Redirects user to journal entries
 function journalEntriesRoute(event) {
   event.preventDefault;
   document.location.replace('/journal');
 }
 
+// Shows fact for six hours of sleep, while hiding other facts
 function sixHoursSleep(event) {
   event.preventDefault;
   if (sixToEightHoursFact.getAttribute("class")){
@@ -45,6 +47,7 @@ function sixHoursSleep(event) {
   sixHoursFact.setAttribute("class", "show")
 }
 
+// Shows fact for six to eight hours of sleep, while hiding other facts
 function sixToEightHoursSleep(event) {
   event.preventDefault;
   if (sixHoursFact.getAttribute("class")){
@@ -59,6 +62,7 @@ function sixToEightHoursSleep(event) {
   sixToEightHoursFact.setAttribute("class", "show")
 }
 
+// Shows fact for eight hours of sleep, while hiding other facts
 function eightHoursSleep(event) {
   event.preventDefault;
   if (sixHoursFact.getAttribute("class")){
@@ -72,7 +76,7 @@ function eightHoursSleep(event) {
   eightHoursFact.removeAttribute("class");
   eightHoursFact.setAttribute("class", "show")
 }
-
+// Shows or hides text suggestions based on user input
 function scoreResponse(event) {
 event.preventDefault;
 if (video.getAttribute("class")){
@@ -105,6 +109,7 @@ function resetSlider(event){
   };
 }
 
+// Loads music for mood radio
 document.addEventListener('DOMContentLoaded', () => {
   const src = [
     [
@@ -124,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "Earth, Wind & Fire", "September", "https://ia803105.us.archive.org/27/items/cd_the-best-of-earth-wind-fire-volume-1_earth-wind-fire/disc1/07.%20Earth%2C%20Wind%20%26%20Fire%20-%20September_sample.mp3", "https://i.scdn.co/image/ab67616d0000b2734dd033f4cf3a0a58059cde69"
     ],
   ];
-  
+  // Displays artist + track name
   for (x = 0; x < src.length; x++) {
     var s = src[x];
     var number = parseInt(x) + 1;
