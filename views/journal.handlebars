@@ -1,5 +1,4 @@
-    
-<div class="input-group input-group-lg m-5">
+{{!-- <div class="input-group input-group-lg m-5">
   <span class="input-group-text border-primary">Im Greatful For ..</span>
   <input id="entry1" type="text" class="form-control border-primary" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 </div>
@@ -13,6 +12,52 @@
 </div>
 <div class="text-center">
   <button class="btn btn-success" id="create_journal_btn">Create Journal</button>
-</div>
-<script src="/js/journal.js"></script>
+</div> --}}
 
+{{!-- new journal entry --}}
+<style>
+    .card {
+        border: none;
+    }
+    .input-group {
+        margin-bottom: 10px;
+    }
+    .input-group-text {
+        background: #2a2850;
+        color: white;
+        border: #2a2850;
+    }
+    #outsideCard {
+        border: 2px solid #2a2850;
+    }
+
+</style>
+
+<div id="outsideCard"class="card text-center">
+  <div class="card-body">
+    <div class="card">
+        <ul class="list-group list-group-flush"> 
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="gratitude_entry_1">Gratitude 1</span>
+                <input type="text" id="entry1" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="gratitude_entry_2">Gratitude 2</span>
+                <input type="text" id="entry2" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="gratitude_entry_3">Gratitude 3</span>
+                <input type="text" id="entry3" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="journal_entry">Journal Entry</span><br>
+                <textarea class="form-control" id="entry4" rows="10"></textarea>
+            </div>
+        </ul>
+    </div>
+    <br>
+    <button class="btn btn-primary" id="signupBtn">Save Entry</button>
+</div>
+
+
+<script src="/js/journal.js"></script>

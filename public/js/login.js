@@ -81,6 +81,10 @@ document
   .addEventListener('click', showSignup);
 
 document
+  .querySelector('#signup-promptBtn2')
+  .addEventListener('click', showSignup);
+
+document
   .querySelector('#login-promptBtn')
   .addEventListener('click', showLogin);
 

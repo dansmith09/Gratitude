@@ -14,6 +14,20 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/user', async (req, res) => {
+    try{
+        const UserJournalData = await Journal.findAll({
+            include: [{ model: User}],
+            where:{
+                user_id: req.session.user_id
+            }
+        });
+        res.status(200).json(UserJournalData);
+    } catch(err) {
+        res.status(500).json(err);
+    }
+});
+
 router.get('/:id', async (req,res) => {
     try {
         const journalData = await Journal.findByPk(req.params.id);
@@ -35,11 +49,13 @@ router.post('/', async (req, res) => {
             date_created: req.body.date_created,
             gratitude_entry_1: req.body.gratitude_entry_1,
             gratitude_entry_2: req.body.gratitude_entry_2,
-            gratitude_entry_3: req.body.gratitude_entry_3
+            gratitude_entry_3: req.body.gratitude_entry_3,
+            journal_entry: req.body.journal_entry,
+            user_id: req.session.user_id
         });
-        res.json(journalData);
+        res.status(200).json(journalData);
     } catch(err){
-        res
+        res.status(500).json(err);
     }
 });
 
@@ -63,5 +79,9 @@ router.delete('/:id',  async (req, res) =>  {
     }
 });
 
+
+
+
+// we have to fetch all the journal for a single user
 
 module.exports = router;
