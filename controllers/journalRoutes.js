@@ -1,8 +1,10 @@
 const router = require('express').Router();
 
-router.get('/journals', async (req, res) => {
+router.get('/journal', async (req, res) => {
     try {
-      res.render('journal');
+      res.render('journal', {
+        logged_in: true
+      });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -10,9 +12,11 @@ router.get('/journals', async (req, res) => {
 
 
 
-router.get('/journals/user', async (req, res) => {
+router.get('/journal/user', async (req, res) => {
   try{
-   res.render("user_journals")
+   res.render("user_journals", {
+    logged_in: true
+   })
 } catch(err) {
     res.status(500).json(err);
 }

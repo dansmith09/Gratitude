@@ -1,3 +1,4 @@
+// Post new journal entries
 const createJournal = async () => {
     const entry1 = document.querySelector('#entry1').value;
     const entry2 = document.querySelector('#entry2').value;
@@ -25,41 +26,19 @@ const createJournal = async () => {
             alert(response.statusText)};
     }
 };
-
-const getJournalsForUser = async () => {
-    const userJournalList = document.querySelector('.journal_list')
-    const response = await fetch('/api/journal/user', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-    });
-    if (response.ok) {
-      const data = await response.json();
-      console.log(data)
-      let html = ''
-      data.forEach(element => {
-        list = `<div class="col-md-4 mb-2">
-        <ul class="list-group list-group-flush">
-        <li class="list-group-item">${element.gratitude_entry_1}</li>
-        <li class="list-group-item">${element.gratitude_entry_2}</li>
-        <li class="list-group-item">${element.gratitude_entry_3}</li>
-      </ul>
-      </div>`
-      html=html + list
-      });
-      userJournalList.innerHTML = html
-
-    } else {
-        alert(response.statusText);
-    }
+// Get previous journal entries for user
+const getJournalsForUser = (event) => {
+    event.preventDefault;
+    document.location.replace('/journal/user');
 };
-getJournalsForUser()
 
 const showSuccess = () => {
     const successAlert = document.getElementById('journalSuccess');
     successAlert.style.display = 'block';
 }
-// create_journal_btn
-document.querySelector('#signupBtn')?.addEventListener('click', createJournal);
+
+// Previous journal entries
+document.querySelector('#access_journal_btn').addEventListener('click', getJournalsForUser);
 
 document
 .querySelector('#create_journal_btn')
