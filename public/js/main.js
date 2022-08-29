@@ -8,6 +8,7 @@ fetch('/api/quotes')
       quoteHTML.innerHTML = randQuote;
 });
 
+// Redirects user to dashboard page on button click
 const dashboard = (event) => {
   event.preventDefault;
   document.location.replace('/');
