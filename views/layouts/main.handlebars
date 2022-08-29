@@ -25,7 +25,19 @@
     <h1>
       <a class="homebutton" href="/">Gratitude</a>
     </h1>
+    <br>
     <h5 class="quote" id="random-quote"></h5>
+    <nav class="float-end">
+      <!-- Conditionally render login or logout links -->
+      {{#if logged_in}}
+        <button class="btn btn-light" id="userDash">Dashboard</button>
+        <button class="btn btn-light" id="logout">Logout</button>
+      {{else}}
+        <button class="btn btn-light" id="login">Login</button>
+      {{/if}}
+    </nav>
+    <br>
+    <br>
   </header>
   <main class="container container-fluid mt-5">
     {{{ body }}}
@@ -37,7 +49,9 @@
   <script src="/js/main.js"></script>
   <script src="/js/dashboard.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

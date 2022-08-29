@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const { Journal, User } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
@@ -24,10 +26,19 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Pass serialized data and session flag into template
-    res.render('dashboard');
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password']},
+    });
+
+    const user = userData.get({ plain: true});
+
+    res.render('dashboard', {
+      ...user,
+      logged_in: true
+    });
   } catch (err) {
     res.status(500).json(err);
   }
