@@ -42,6 +42,7 @@ const getJournalsForUser = async () => {
         <li class="list-group-item">${element.gratitude_entry_1}</li>
         <li class="list-group-item">${element.gratitude_entry_2}</li>
         <li class="list-group-item">${element.gratitude_entry_3}</li>
+        <li class="list-group-item">${element.journal_entry}</li>
       </ul>
       </div>`
       html=html + list
@@ -52,14 +53,14 @@ const getJournalsForUser = async () => {
         alert(response.statusText);
     }
 };
-getJournalsForUser()
 
 const showSuccess = () => {
     const successAlert = document.getElementById('journalSuccess');
     successAlert.style.display = 'block';
 }
-// create_journal_btn
-document.querySelector('#signupBtn')?.addEventListener('click', createJournal);
+
+// Previous journal entries
+document.querySelector('#access_journal_btn').addEventListener('click', getJournalsForUser);
 
 document
 .querySelector('#create_journal_btn')
