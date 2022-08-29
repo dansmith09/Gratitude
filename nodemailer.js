@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-express-handlebars');
 require('dotenv').config();
 
+// Initiates nodemailer credentials
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -11,6 +12,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+// Defines handlebars options
 const handlebarOptions = {
   viewEngine: {
     extName: ".handlebars",
@@ -23,7 +25,9 @@ const handlebarOptions = {
 
 transporter.use('compile', hbs(handlebarOptions));
 
+// Defines welcomeMail Function to be used in user sign up
 const welcomeMail = (name, email) => {
+    // Defines mail options
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: email,
@@ -33,7 +37,7 @@ const welcomeMail = (name, email) => {
           name: name,
         }
     };
-      
+    // calls sendMail function with mail options defined
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
           console.log(error);
