@@ -54,3 +54,8 @@ getJournalsForUser()
  
 // create_journal_btn
 document.querySelector('#signupBtn')?.addEventListener('click', createJournal);
+
+document
+.querySelector('#create_journal_btn')
+.addEventListener('click', createJournal);
+

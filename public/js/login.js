@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       // If successful, redirect the browser to the profile page
       // This may need to be changed depending upon what we choose the user main page to be called.
-      document.location.replace('/profile');
+      document.location.replace('/dashboard');
     } else {
       loginAlert();
     }
@@ -42,9 +42,10 @@ const signupFormHandler = async (event) => {
     });
 
   // This automatically logs the user in after a successful sign up
-  // Again, this page link may need to be changed
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/dashboard');
+    } else {
+      alert(response.statusText);
     }
   }
 };

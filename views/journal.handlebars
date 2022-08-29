@@ -1,18 +1,3 @@
-{{!-- <div class="input-group input-group-lg m-5">
-  <span class="input-group-text border-primary">Im Greatful For ..</span>
-  <input id="entry1" type="text" class="form-control border-primary" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
-<div class="input-group input-group-lg m-5">
-  <span class="input-group-text border-primary h-25">Im Greatful For ..</span>
-  <input id="entry2" type="text" class="form-control border-primary" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
-<div class="input-group input-group-lg m-5 ">
-  <span class="input-group-text border-primary">Im Greatful For ..</span>
-  <input id="entry3" type="text" class="form-control border-primary" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
-<div class="text-center">
-  <button class="btn btn-success" id="create_journal_btn">Create Journal</button>
-</div> --}}
 
 {{!-- new journal entry --}}
 <style>
@@ -38,26 +23,29 @@
     <div class="card">
         <ul class="list-group list-group-flush"> 
             <div class="input-group input-group-lg">
-                <span class="input-group-text" id="gratitude_entry_1">Gratitude 1</span>
-                <input type="text" id="entry1" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+
+                <span class="input-group-text">Gratitude 1</span>
+                <input  id="gratitude_entry_1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
             </div>
             <div class="input-group input-group-lg">
-                <span class="input-group-text" id="gratitude_entry_2">Gratitude 2</span>
-                <input type="text" id="entry2" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <span class="input-group-text">Gratitude 2</span>
+                <input  id="gratitude_entry_2" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
             </div>
             <div class="input-group input-group-lg">
-                <span class="input-group-text" id="gratitude_entry_3">Gratitude 3</span>
-                <input type="text" id="entry3" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <span class="input-group-text" >Gratitude 3</span>
+                <input id="gratitude_entry_3" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
             </div>
             <div class="input-group input-group-lg">
-                <span class="input-group-text" id="journal_entry">Journal Entry</span><br>
-                <textarea class="form-control" id="entry4" rows="10"></textarea>
+                <span class="input-group-text">Journal Entry</span><br>
+                <textarea id="journal_entry" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
             </div>
         </ul>
     </div>
-    <br>
-    <button class="btn btn-primary" id="signupBtn">Save Entry</button>
+    <div id="journalSuccess"class="alert alert-success" role="alert">
+        <b>Awesome Stuff! </b>Your gratitude and journal entries have been saved.
+    </div>
+    <button class="btn btn-primary" id="create_journal_btn" type="submit">Save Entry</button>
 </div>
 
-
 <script src="/js/journal.js"></script>
+
