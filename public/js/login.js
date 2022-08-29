@@ -42,7 +42,6 @@ const signupFormHandler = async (event) => {
     });
 
   // This automatically logs the user in after a successful sign up
-  // Again, this page link may need to be changed
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
