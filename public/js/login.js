@@ -89,6 +89,7 @@ document
   .querySelector('#login-promptBtn')
   .addEventListener('click', showLogin);
 
+// Errors that display if user input criteria are not met
 const signUpAlert = () => {
   const signUpAlert = document.querySelector('#signUpAlert');
   signUpAlert.style.display = 'block';
